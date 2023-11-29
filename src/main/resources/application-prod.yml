@@ -1,5 +1,5 @@
 application:
-  link: http://localhost:8081
+  link: https://long-covid-user-service-da0307ecda1b.herokuapp.com
 spring:
   kafka:
     properties:
