@@ -18,10 +18,6 @@
 		<spring-cloud.version>2021.0.8</spring-cloud.version>
 	</properties>
 	<dependencies>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.cloud</groupId>-->
-<!--			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
@@ -116,30 +112,6 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
-				<version>3.2.1</version>
-				<configuration>
-					<from>
-						<image>openjdk:11</image>
-						<auth>
-<!--							<username>username</username>-->
-<!--							<password>password</password>-->
-						</auth>
-					</from>
-					<to>
-<!--						<image>registry.hub.docker.com/usernamedockerregistry/${project.artifactId}</image>-->
-<!--						<tags>${project.version}</tags>-->
-<!--						<auth>-->
-<!--							<username>usernamme</username>-->
-<!--							<password>password</password>-->
-<!--						</auth>-->
-						<image>${REPO_URL}/${project.artifactId}</image>
-						<tags>${project.version}</tags>
-					</to>
 				</configuration>
 			</plugin>
 		</plugins>
