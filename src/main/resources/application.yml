@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  kafka:
+    properties:
+      security:
+        protocol: SSL
+      ssl:
+        truststore-location: ${KAFKA_TRUSTED_CERT}
+        keystore-location: ${KAFKA_CLIENT_CERT}
+        keystore-key: ${KAFKA_CLIENT_CERT_KEY}
+    producer:
+      bootstrap-servers: ${KAFKA_URL}
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+    topic:
+      name: longcovvid_notification_topic

@@ -33,6 +33,3 @@ build/
 .vscode/
 
 #resources
-src/main/resources/application.yml
-src/main/resources/application-docker.yml
-src/main/resources/application-prod.yml
