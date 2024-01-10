@@ -1,5 +1,5 @@
 application:
-  link: http://user-service-svc
+  link: http://34.125.41.225
 spring:
   kafka:
     producer:
