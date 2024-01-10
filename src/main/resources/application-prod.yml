@@ -3,7 +3,7 @@ application:
 spring:
   kafka:
     producer:
-      bootstrap-servers: brokerr:9092
+      bootstrap-servers: broker:9092
       key-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
     topic:

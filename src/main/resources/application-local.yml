@@ -1,23 +1,23 @@
 application:
   link: http://localhost:8080
-#spring:
-#  kafka:
-#    producer:
-#      bootstrap-servers: localhost:9092
-#      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
-#      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
-#    topic:
-#      name: longcovvid_notification_topic
-#  application:
-#    name: user-service
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/userdb
-#    username:
-#    password:
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#    show-sql: true
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+    topic:
+      name: longcovvid_notification_topic
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
