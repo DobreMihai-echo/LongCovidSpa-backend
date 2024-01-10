@@ -128,6 +128,20 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<from>
+						<image>openjdk:11</image>
+					</from>
+					<to>
+						<image>${REPO_URL}/${project.artifactId}</image>
+						<tags>${project.version}</tags>
+					</to>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
