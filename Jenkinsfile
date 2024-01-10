@@ -7,7 +7,7 @@ node {
         branches: [[name: '*/main']],
         extensions: [],
         userRemoteConfigs: [[credentialsId: 'git',
-        url: 'https://github.com/DobreMihai-echo/myplanet-user.git']]])
+        url: 'https://github.com/DobreMihai-echo/LongCovidSpa-backend']]])
     }
     stage('Build and Push Image') {
         withCredentials([file(credentialsId: 'gcp', variable: 'GC_KEY')]) {

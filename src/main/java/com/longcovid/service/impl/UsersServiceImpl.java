@@ -12,6 +12,7 @@ import com.longcovid.service.UsersService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.core.Authentication;
@@ -182,7 +183,6 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public UserResponse userToUserResponse(Users user) {
-        System.out.println("MY USER:"+user.getUsername());
         return UserResponse.builder()
                 .user(user)
                 .build();
@@ -214,5 +214,9 @@ public class UsersServiceImpl implements UsersService {
     public Users changePermission(String roleName) {
         return null;
     }
+
+
+    
+
 
 }

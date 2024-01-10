@@ -1,16 +1,9 @@
 application:
-  link: https://long-covid-user-service-da0307ecda1b.herokuapp.com
+  link: http://user-service-svc
 spring:
   kafka:
-    properties:
-      security:
-        protocol: SSL
-      ssl:
-        truststore-location: ${KAFKA_TRUSTED_CERT}
-        keystore-location: ${KAFKA_CLIENT_CERT}
-        keystore-key: ${KAFKA_CLIENT_CERT_KEY}
     producer:
-      bootstrap-servers: ${KAFKA_URL}
+      bootstrap-servers: brokerr:9092
       key-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
     topic:
@@ -18,13 +11,9 @@ spring:
   application:
     name: user-service
   datasource:
-    url: ${spring.datasource.url}
-    driverClassName: org.postgresql.Driver
-    maxActive: 10
-    maxIdle: 5
-    minIdle: 2
-    initialSize: 5
-    removeAbandoned: true
+    url: jdbc:postgresql://postgres-user-service:5432/userdb
+    username: userprod
+    password: password
   jpa:
     hibernate:
       ddl-auto: update
